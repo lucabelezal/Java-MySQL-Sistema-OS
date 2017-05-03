@@ -7,51 +7,63 @@ create table tbusuarios (
     usuario varchar(50) not null,
     fone varchar(15),
     login varchar(15) not null unique,
-    senha  varchar(15)not null
+    senha  varchar(15)not null,
+    perfil varchar(15) not null
 );
-
 -- Descrevendo o nome
 describe tbusuarios;
 -- insere dados na tabela usuario
 -- Create
-insert into tbusuarios(iduser, usuario, fone, login, senha)
-values (1, 'Eduardo Camargo', '6598152-0407', 'dudu', '123');
+insert into tbusuarios(iduser, usuario, fone, login, senha,perfil)
+values (1, 'Uninove', '6598152-0890', 'uninove', '123','user');
 -- Linha abaixo exibe os dados
 select * from tbusuarios;
 
-insert into tbusuarios(iduser, usuario, fone, login, senha)
-values (2, 'Administrador', '6598152-0407', 'admin', 'admin');
+insert into tbusuarios(iduser, usuario, fone, login, senha,perfil)
+values (2, 'Administrador', '6598152-0407', 'admin', 'admin','admin');
 
-insert into tbusuarios(iduser, usuario, fone, login, senha)
-values (3, 'Bill Gates', '6598152-0407', 'bill', '123');
+insert into tbusuarios(iduser, usuario, fone, login, senha,perfil)
+values (3, 'Bill Gates', '6598152-0407', 'bill', '123','user');
 
 -- A linha abaixo modifica dados da tabela (CRUD)
 -- update
 
-update tbusuarios set fone ='6599999-9999' where iduser=2;
+-- update tbusuarios set fone ='6599999-1111' where iduser=4;
+update tbusuarios set senha ='123' where iduser=3;
 
 -- A linha abaixo apaga um registro
 -- Delete
-delete from tbusuarios where iduser=3;
+ delete from tbusuarios where iduser=3;
 
 select * from tbusuarios;
+select * from tbclientes;
+desc tbclientes;
 
 create table tbclientes (
 	idcli int primary key auto_increment,
     nomecli varchar(50)not null,
     endcli varchar(100),
     fonecli varchar(50) not null,
-    email varchar(50)
+    emailcli varchar(50)
 );
+
+/*select * from tbclientesSITE;
+create table tbclientesSITE (
+	idcli int primary key auto_increment,
+    nomesite varchar(50)not null,
+    cepsite varchar(100),
+    cidadesite varchar(50) not null,
+    emailcli varchar(50),
+    emailsite varchar(50)
+);*/
 
 
 select * from tbclientes;
 
--- Quando id é auto_increment, não preciso declarar ID
 insert into tbclientes(nomecli, endcli, fonecli,
 email) 
 
-values('Linus Torvalds', 'Rua Tux, 2017', '9999-9999',
+values('Jose Torvalds', 'Rua Tux, 2017', '9999-9999',
 'linus@linux.com.br');
 
 

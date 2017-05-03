@@ -26,68 +26,68 @@ public class TelaLogin extends javax.swing.JFrame {
     ResultSet rs = null;
 
     public void logar() {
-        String sql = "select * from tbusuarios where login=? and senha =?";
+	String sql = "select * from tbusuarios where login=? and senha =?";
 
-        try {
-            // A linha abaixo prepara a Consulta ao Banco de dados
-            // Em função do que foi Digitado nas caixas de Texto
-            // o ? é Substituido pelo CONTEUDO das Variaveis TXT
+	try {
+	    // A linha abaixo prepara a Consulta ao Banco de dados
+	    // Em função do que foi Digitado nas caixas de Texto
+	    // o ? é Substituido pelo CONTEUDO das Variaveis TXT
 
-            // a Varivavel acima pst PREPARA a CONSULTA
-            pst = conexao.prepareStatement(sql);
-            pst.setString(1, txtUsuario.getText());
-            pst.setString(2, txtSenha.getText());
+	    // a Varivavel acima pst PREPARA a CONSULTA
+	    pst = conexao.prepareStatement(sql);
+	    pst.setString(1, txtUsuario.getText());
+	    pst.setString(2, txtSenha.getText());
 
-            // Om comando abaixo Executa a Query = Consulta
-            rs = pst.executeQuery();
+	    // Om comando abaixo Executa a Query = Consulta
+	    rs = pst.executeQuery();
 
-            // Verifica se Existe um usuario com login e senha correspondente
-            if (rs.next()) {
-                //A linha abaixo obtem o conteúdo do  perfil da tabela tbusuario
-                String perfil = rs.getString(6);
-                //Faz tratamento do perfil do usuário
-                if (perfil.equals("admin")) {
-                    // Instancio o Objeto
-                    TelaPrincipal principal;
-                    principal = new TelaPrincipal();
-                    principal.setVisible(true);
-                    TelaPrincipal.MenRel.setEnabled(true);
-                    TelaPrincipal.MenCadUsu.setEnabled(true);
-                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
-                    this.dispose();
-                } else {
-                    TelaPrincipal principal = new TelaPrincipal();
-                    principal.setVisible(true);
-                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
-                    this.dispose();
-                }
+	    // Verifica se Existe um usuario com login e senha correspondente
+	    if (rs.next()) {
+		//A linha abaixo obtem o conteúdo do  perfil da tabela tbusuario
+		String perfil = rs.getString(6);
+		//Faz tratamento do perfil do usuário
+		if (perfil.equals("admin")) {
+		    // Instancio o Objeto
+		    TelaPrincipal principal;
+		    principal = new TelaPrincipal();
+		    principal.setVisible(true);
+		    TelaPrincipal.MenRel.setEnabled(true);
+		    TelaPrincipal.MenCadUsu.setEnabled(true);
+		    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+		    this.dispose();
+		} else {
+		    TelaPrincipal principal = new TelaPrincipal();
+		    principal.setVisible(true);
+		    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+		    this.dispose();
+		}
 
-                conexao.close();
+		conexao.close();
 
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuario ou Senha inválida !");
-            }
+	    } else {
+		JOptionPane.showMessageDialog(null, "Usuario ou Senha inválida !");
+	    }
 
-        } catch (Exception e) {
-            // Exibe Messagem de ERROs
-            JOptionPane.showMessageDialog(null, e);
-        }
+	} catch (Exception e) {
+	    // Exibe Messagem de ERROs
+	    JOptionPane.showMessageDialog(null, e);
+	}
     }
 
     public TelaLogin() {
-        initComponents();
-        conexao = ModuloConexao.conector();
-        btnLogin.setBackground(new Color(108, 108, 108, 1));
-        btnLogin.setForeground(Color.WHITE);
+	initComponents();
+	conexao = ModuloConexao.conector();
+	btnLogin.setBackground(new Color(108, 108, 108, 1));
+	btnLogin.setForeground(Color.WHITE);
 
-        // Apoio para STATUS DA CONEXAO
-        //System.out.println(conexao); //  /br.com/eduardocamargo/icones/
-        if (conexao != null) {
-            lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/uninove/icones/img_database_OK.png")));
-        } else {
-            lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/uninove/icones/img_database_ERROR.png")));
+	// Apoio para STATUS DA CONEXAO
+	//System.out.println(conexao); //  /br.com/eduardocamargo/icones/
+	if (conexao != null) {
+	    lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/uninove/icones/img_database_OK.png")));
+	} else {
+	    lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/uninove/icones/img_database_ERROR.png")));
 
-        }
+	}
 
     }
 
@@ -113,7 +113,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Empresa X - Login");
+        setTitle("SmartSolutions - Login");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
 
@@ -208,36 +208,36 @@ public class TelaLogin extends javax.swing.JFrame {
     // O Botão Login chamando o Método Logar
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
 
-        logar();
+	logar();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+	/* Set the Nimbus look and feel */
+	//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+	/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+	 */
+	try {
+	    for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+		if ("Nimbus".equals(info.getName())) {
+		    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+		    break;
+		}
+	    }
+	} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+	    java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	}
+	//</editor-fold>
 
-        //</editor-fold>
+	//</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new TelaLogin().setVisible(true);
-        });
+	/* Create and display the form */
+	java.awt.EventQueue.invokeLater(() -> {
+	    new TelaLogin().setVisible(true);
+	});
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
