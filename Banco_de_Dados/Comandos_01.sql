@@ -47,15 +47,15 @@ create table tbclientes (
     emailcli varchar(50)
 );
 
-/*select * from tbclientesSITE;
+-- Tabela de teste para o site
 create table tbclientesSITE (
 	idcli int primary key auto_increment,
     nomesite varchar(50)not null,
     cepsite varchar(100),
     cidadesite varchar(50) not null,
     emailcli varchar(50),
-    emailsite varchar(50)
-);*/
+    senhasite varchar(50)
+);
 
 
 select * from tbclientes;
@@ -87,6 +87,9 @@ insert tbos(equipamento, defeito, servico, tecnico, valor, idcli)
 values ('Notebook', 'não liga', 'troca da fonte', 'Zé', 87.50, 1);
 
 select * from tbos;
+
+alter table tbos add tipo varchar(15) not null after data_os;
+alter table tbos add situacao varchar(20) not null after tipo;
 
 -- Traz informações de duas tabelas (Crio uma variavel O
 select
