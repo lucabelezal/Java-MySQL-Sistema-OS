@@ -23,7 +23,7 @@ public class ModuloConexao {
 	// Chama p Driver MYSQL
 	String driver = "com.mysql.jdbc.Driver";
 	//Armanezando Dados do DB
-	String url = "jdbc:mysql://localhost:3306/dbinfox?autoReconnect=true&useSSL=false";
+	String url = "jdbc:mysql://localhost:3306/dbsmartsolutions?autoReconnect=true&useSSL=false";
 	String user = "root";
 	String password = "root";
 	// Estabelecendp a Conexao

@@ -11,10 +11,6 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
-/**
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
 public class TelaOS extends javax.swing.JInternalFrame {
 
     Connection conexao = null;

@@ -10,9 +10,6 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[700, 510]"/>
     </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[700, 510]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -32,55 +29,54 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jLabel3" alignment="0" pref="64" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel5" max="32767" attributes="0"/>
+                  <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="btnUsuCreate" linkSize="6" min="-2" pref="145" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtUsuId" min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="btnUsuUpdate" linkSize="6" min="-2" pref="145" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnUsoDelete" linkSize="6" min="-2" pref="152" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" pref="46" max="32767" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="txtUsuFone" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtUsuFone" pref="234" max="32767" attributes="0"/>
+                                  <Component id="txtUsuLogin" max="32767" attributes="0"/>
+                              </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cboUsuPerfil" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel6" pref="48" max="32767" attributes="0"/>
+                                  <Component id="jLabel4" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cboUsuPerfil" pref="284" max="32767" attributes="0"/>
+                                  <Component id="txtUsuSenha" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="txtUsuNome" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="txtUsuLogin" min="-2" pref="256" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtUsuId" min="-2" pref="170" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" pref="43" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtUsuSenha" max="32767" attributes="0"/>
+                              <Component id="btnUsoRead" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                              <Component id="jLabel7" pref="86" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="txtUsuNome" alignment="1" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="89" max="32767" attributes="0"/>
-              <Component id="btnUsuCreate" min="-2" pref="120" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnUsoRead" min="-2" pref="120" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnUsuUpdate" min="-2" pref="121" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnUsoDelete" min="-2" pref="120" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,37 +85,47 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtUsuId" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtUsuId" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="3" max="32767" attributes="0"/>
+                  <Component id="btnUsoRead" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtUsuNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtUsuNome" alignment="3" pref="27" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" pref="27" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtUsuFone" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cboUsuPerfil" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="3" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel6" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboUsuPerfil" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="3" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" linkSize="4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="txtUsuFone" linkSize="4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtUsuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtUsuSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" pref="27" max="32767" attributes="0"/>
+                  <Component id="txtUsuLogin" alignment="3" pref="27" max="32767" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" pref="27" max="32767" attributes="0"/>
+                  <Component id="txtUsuSenha" alignment="3" pref="27" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="169" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnUsuCreate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnUsoRead" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnUsuUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnUsoDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnUsuCreate" alignment="3" max="32767" attributes="0"/>
+                  <Component id="btnUsuUpdate" alignment="3" max="32767" attributes="0"/>
+                  <Component id="btnUsoDelete" alignment="3" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -127,7 +133,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="*id"/>
+        <Property name="text" type="java.lang.String" value="*id:"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[40, 16]"/>
         </Property>
@@ -135,7 +141,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="*Nome"/>
+        <Property name="text" type="java.lang.String" value="*Nome:"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[40, 16]"/>
         </Property>
@@ -143,7 +149,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fone"/>
+        <Property name="text" type="java.lang.String" value="Telefone:"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[40, 16]"/>
         </Property>
@@ -162,7 +168,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="*Login"/>
+        <Property name="text" type="java.lang.String" value="*Login:"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[40, 16]"/>
         </Property>

@@ -39,23 +39,39 @@ select * from tbusuarios;
 select * from tbclientes;
 desc tbclientes;
 
+drop table tbclientes;
+
 create table tbclientes (
-	idcli int primary key auto_increment,
-    nomecli varchar(50)not null,
-    endcli varchar(100),
-    fonecli varchar(50) not null,
-    emailcli varchar(50)
-);
+    idcli int primary key auto_increment,
+    nomecli varchar(40) not null,
+    cnpjcli varchar(20),
+    telefonecli varchar(20) not null,
+    estadocli varchar(40),
+    cidadecli varchar(50),
+    bairrocli varchar(30),
+    cepcli varchar(20),
+    enderecocli varchar(50),
+    emailcli varchar(50),
+    senhacli varchar(50)
+    );
+
+-- create table tbclientes (
+-- 	idcli int primary key auto_increment,
+--     nomecli varchar(50)not null,
+--     endcli varchar(100),
+--     fonecli varchar(50) not null,
+--     emailcli varchar(50)
+-- );
 
 -- Tabela de teste para o site
-create table tbclientesSITE (
-	idcli int primary key auto_increment,
-    nomesite varchar(50)not null,
-    cepsite varchar(100),
-    cidadesite varchar(50) not null,
-    emailcli varchar(50),
-    senhasite varchar(50)
-);
+-- create table tbclientesSITE (
+-- 	idcli int primary key auto_increment,
+--     nomesite varchar(50)not null,
+--     cepsite varchar(100),
+--     cidadesite varchar(50) not null,
+--     emailcli varchar(50),
+--     senhasite varchar(50)
+-- );
 
 
 select * from tbclientes;
